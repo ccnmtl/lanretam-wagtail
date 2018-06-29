@@ -36,7 +36,7 @@ else
 	PIP ?= $(VE)/bin/pip
 endif
 
-jenkins: check flake8 test eslint bandit
+jenkins: check flake8 test bandit
 
 $(PY_SENTINAL): $(REQUIREMENTS) $(VIRTUALENV)
 	rm -rf $(VE)

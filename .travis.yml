@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.5"
+  - "3.6"
+script:
+  - make
+notifications:
+  slack: ccnmtl:GizSNscLWJLldjQrffB8mwgm
