@@ -27,6 +27,7 @@ class SectionIndexPage(Page):
         FieldPanel('body', classname="full"),
     ]
 
+
 class SectionPage(Page):
     body = RichTextField(blank=True)
 
