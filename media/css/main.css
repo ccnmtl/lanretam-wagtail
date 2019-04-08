@@ -1,1 +1,146 @@
-/* Fill custom CSS here */
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #e0e0e0;
+    height: 100%;
+}
+
+
+/* Banner elements */
+.lmh-banner {
+    background-color: #fff;
+}
+
+.lmh-banner .row {
+    margin: 0;
+    padding: 0;
+}
+
+.lmh-logo img {
+    width: 30%;
+}
+
+.lmh-country {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    line-height: 100%;
+}
+
+.lmh-dept {
+    font-size: 1.1rem;
+    line-height: 120%;
+}
+
+.gb-navbar {
+    background-color: #2aabe4;
+}
+
+.gb-navbar .active {
+    background-color: #2d83a9;
+}
+
+.gb-navbar .nav-link {
+    color: #fff;
+}
+
+.gb-navbar .nav-link:hover {
+    color: #cff;
+    text-decoration: underline;
+}
+
+#section-sidebar-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#section-sidebar-nav .nav-link.active {
+    color: #666;
+    font-weight: bold;
+}
+
+main {
+    background-color: #fff;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Special cases */
+@media (max-width: 575px) {
+    .gb-navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+}
+@media (max-width: 991.98px) {
+    .gb-navbar {
+        white-space: nowrap;
+        font-size: 0.875rem;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    /* Banner elements */
+    .lmh-banner .row {
+        width: 30rem;
+    }
+    .lmh-logo img {
+        width: 100%;
+    }
+    .device-detector {
+        width: 20rem;
+        display: block;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .lmh-slides {
+        width: 15.5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* Banner elements */
+    .lmh-banner .row {
+        height: 118px;
+        width: 36rem;
+        padding-top: 22px !important;
+        padding-bottom: 0 !important;
+    }
+    .lmh-country {
+        font-size: 1.6rem;
+    }
+
+    .lmh-dept {
+        font-size: 1.2rem;
+    }
+    .lmh-slides {
+        width: 20rem;
+    }
+    .gb-navbar {
+        font-size: 1.1rem;
+    }
+    #section-sidebar-nav {
+        display: block !important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Print */
+@media print {
+}
