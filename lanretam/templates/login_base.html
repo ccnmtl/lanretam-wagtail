@@ -1,0 +1,75 @@
+{% load compress %}
+{% load bootstrap4 %}
+{% load static %}
+{% load waffle_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %} &mdash; CTL Portfolio</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="{{STATIC_URL}}css/fontawesome/font-awesome.min.css">
+
+    <!-- Local CSS -->
+    {% compress css %}
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}css/main.css">
+    {% endcompress %}
+    
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="{{STATIC_URL}}img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{{STATIC_URL}}img/favicon.ico">
+    <link rel="icon" href="{{STATIC_URL}}img/favicon.ico">
+    <link rel="icon" type="image/png" href="{{STATIC_URL}}img/favicon.png">
+
+</head>
+<body>
+
+    <header class="container" id="header-portfolio">
+        <div class="d-flex flex-column text-center" id="login-logo-portfolio">
+            <img class="d-inline-block" src="{{STATIC_URL}}img/logo-ctl-color.svg" alt="Logo: Go to CTL Website" />
+            <h1>PORTFOLIO</h1>
+        </div>
+        <nav class="navbar navbar-expand navbar-light bg-white" id="login-navbar-portfolio">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPortfolioGlobal" aria-controls="navbarPortfolioGlobal" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarPortfolioGlobal">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="/">production</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="https://github.com/ccnmtl/portfolio" target="_blank">github</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="https://wiki.ctl.columbia.edu/index.php/CTL_Portfolio_Editor_Guide" target="_blank">editor guide</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container bg-white">
+
+    {% block content %}{% endblock %}
+
+    </main>
+
+
+<script src="{{STATIC_URL}}js/lib/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script
+     data-main="{{STATIC_URL}}js/src/main.js"
+     src="{{STATIC_URL}}js/lib/require/require.js"></script>
+
+
+</body>
+</html>

@@ -13,48 +13,38 @@ PROJECT_APPS = [
 
 USE_TZ = True
 
-MIDDLEWARE_CLASSES += [  # noqa
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+MIDDLEWARE += [  # noqa
+    'wagtail.core.middleware.SiteMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
 INSTALLED_APPS += [  # noqa
-    'bootstrap3',
+    'bootstrap4',
     'infranil',
     'django_extensions',
-    'registration',
-    'pagetree',
-    'pageblocks',
-    'quizblock',
 
-    'wagtail.wagtailforms',
-    'wagtail.wagtailredirects',
-    'wagtail.wagtailembeds',
-    'wagtail.wagtailsites',
-    'wagtail.wagtailusers',
-    'wagtail.wagtailsnippets',
-    'wagtail.wagtaildocs',
-    'wagtail.wagtailimages',
-    'wagtail.wagtailsearch',
-    'wagtail.wagtailadmin',
-    'wagtail.wagtailcore',
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail.core',
     'modelcluster',
     'taggit',
 
     'lanretam.main',
 ]
 
-PAGEBLOCKS = [
-    'pageblocks.TextBlock',
-    'pageblocks.HTMLBlock',
-    'pageblocks.PullQuoteBlock',
-    'pageblocks.SimpleImageBlock',
-    'quizblock.Quiz',
-]
-
 THUMBNAIL_SUBDIR = "thumbs"
 LOGIN_REDIRECT_URL = "/"
 
-ACCOUNT_ACTIVATION_DAYS = 7
+WAGTAIL_SITE_NAME = 'Lanretam'
 
-WAGTAIL_SITE_NAME = 'lanretam'
+WIND_AFFIL_HANDLERS = ['lanretam.main.auth.WagtailEditorMapper',
+                       'djangowind.auth.StaffMapper',
+                       'djangowind.auth.SuperuserMapper']
