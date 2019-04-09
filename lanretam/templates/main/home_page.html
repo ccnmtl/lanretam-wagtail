@@ -2,8 +2,11 @@
 
 {% load wagtailcore_tags %}
 
-{% block body_class %}template-homepage{% endblock %}
+{% block body_class %}{% endblock %}
 
-{% block content %}boo
-    {{ page.body|richtext }}
+{% block content %}
+<main class="col-12" id="maincontent" aria-labelledby="page-title">
+<h1 id="page-title">{{ page.title }}</h1>
+{{ page.body|richtext }}
+</main>
 {% endblock %}
