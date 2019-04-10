@@ -1,146 +1,468 @@
-html {
-    height: 100%;
-}
-
 body {
     background-color: #e0e0e0;
-    height: 100%;
 }
 
+header, main, .contentbox, footer { background-color: #fff; }
 
-/* Banner elements */
-.lmh-banner {
-    background-color: #fff;
+a {
+    color: #06c;
+    text-decoration: underline;
 }
 
-.lmh-banner .row {
-    margin: 0;
+h1 {
+    font-weight: normal;
+    font-size: 1.625rem;
+}
+
+h2 {
     padding: 0;
+    margin: 2rem 0 0.5rem 0;
+    border: 0;
+    font-size: 1.25rem;
+}
+
+/* Skip link ----------------------------------------------------------*/
+
+.skippy {
+    display: inline-block;
+    text-align: center;
+    width: 12rem;
+}
+
+#contentjump {
+    margin-left: 0;
+}
+
+#segmentjump {
+    margin-left: 5rem;
+}
+
+.skippy:focus, .skippy:active {
+    padding: 0.5rem;
+    color: #fff;
+    text-decoration: underline;
+    background-color: #2a7da7;
+    outline: 0.125rem dotted #005c8a;
+    font-weight: 700;
+}
+
+/* Banner identity ----------------------------------------------------------*/
+
+.lmh-header {
+    padding: 0;
+    text-align: center;
+}
+
+.lmh-logo {
+    padding-top: 0.5rem;
 }
 
 .lmh-logo img {
-    width: 30%;
+    width: 25%;
+}
+
+.lmh-name {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 .lmh-country {
-    font-size: 1.4rem;
+    font-size: 1.375rem;
     text-transform: uppercase;
     line-height: 100%;
 }
 
 .lmh-dept {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     line-height: 120%;
 }
 
-.gb-navbar {
-    background-color: #2aabe4;
+.lmh-slides {
+    display: none;
 }
 
-.gb-navbar .active {
-    background-color: #2d83a9;
+/* Site navigation ----------------------------------------------------------*/
+
+.lmh-navbar {
+    background-color: #3399cc;
+    padding: 0;
+    font-size: 0.875rem;
 }
 
-.gb-navbar .nav-link {
+.lmh-navbar .active .nav-link {
+    background-color: #005c8a;
+}
+
+.lmh-navbar .nav-link {
     color: #fff;
+    text-decoration: none;
 }
 
-.gb-navbar .nav-link:hover {
+.lmh-navbar .nav-link:hover,
+.lmh-navbar .nav-link:active,
+.lmh-navbar .nav-link:focus {
     color: #cff;
     text-decoration: underline;
+    background-color: #2a7da7;
+    outline: 0.125rem dotted #005c8a;
 }
 
-#section-sidebar-nav {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.lmh-navbar .active .nav-link:hover,
+.lmh-navbar .active .nav-link:active,
+.lmh-navbar .active .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #005c8a;
 }
 
-#section-sidebar-nav .nav-link.active {
+/* Side segment navigation --------------------------------------------------*/
+
+#lmhSegmentNav {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+}
+
+#lmhSegmentNav .navbar-toggler {
+    font-size: 1rem;
     color: #666;
-    font-weight: bold;
+}
+
+#lmhSegment {
+    margin: 1rem;
+}
+
+#lmhSegment .nav-item .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: none;
+}
+
+#lmhSegment .active .nav-link {
+    background-color: #e4f1fd;
+    color: #333;
+}
+
+#lmhSegment .nav-item .nav-link:hover,
+#lmhSegment .nav-item .nav-link:active,
+#lmhSegment .nav-item .nav-link:focus {
+    text-decoration: underline;
+    outline: 0.0625rem dotted #06c;
+}
+
+#lmhSegment .nav-item .active .nav-link:hover,
+#lmhSegment .nav-item .active .nav-link:active,
+#lmhSegment .nav-item .active .nav-link:focus {
+    text-decoration: none;
+}
+
+/* Content ---------------------------------------------------------------*/
+
+.contentbox {
+    padding: 0;
 }
 
 main {
-    background-color: #fff;
+    margin-top: 1rem;
+}
+
+main a:hover {
+    border: 0;
+    outline: 0;
+    background-color: #ffdbdb;
+    color: #900;
+}
+
+main a:focus, main a:active,
+footer a:focus, footer a:active {
+    border: 0;
+    outline: 0.125rem solid #06c;
+    color: #fff !important;
+    background-color: #06c;
+}
+
+/* Footer -------------------------------------------------------------------*/
+
+footer {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    border-top: 1px solid #ccc;
 }
 
 
-/* Extra small devices (portrait phones, less than 576px)
-No media query for `xs` since this is the default in Bootstrap */
+/* Login page ---------------------------------------------------------------*/
 
-/* Special cases */
-@media (max-width: 575px) {
-    .gb-navbar {
-        padding-left: 0;
-        padding-right: 0;
-    }
+.login-page main {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
-@media (max-width: 767px) {
-    .container {
-        max-width: none;
-    }
+
+.login-page .lmh-banner {
+    padding: 1rem 0;
 }
-@media (max-width: 991.98px) {
-    .gb-navbar {
-        white-space: nowrap;
-        font-size: 0.875rem;
-    }
+
+.login-page .lmh-logo {
+    text-align: center;
+    padding: 0;
 }
+
+.login-page .lmh-logo img {
+    width: 50%;
+}
+
+.login-page .lmh-name {
+    text-align: center;
+    margin: 0;
+    padding: 1rem 3rem 0 3rem;
+}
+
+.login-page .lmh-country {
+    padding: 0 0 1rem 0;
+    border-bottom: 0.125rem solid #000;
+}
+
+.line-republic {
+    display: block;
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+}
+
+.line-lanretam {
+    display: block;
+    font-size: 2rem;
+    padding-bottom: 0rem;
+}
+
+.login-page .lmh-dept {
+    padding-top: 0.25rem;
+    font-size: 1.375rem;
+}
+
+.lmh-login {
+    padding: 2rem 2rem 4rem 2rem;
+    margin: auto;
+    width: auto;
+}
+
+.lmh-login legend {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.lmh-login label {
+    text-align: left;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+    color: #333;
+}
+
+.lmh-login button {
+    margin-top: 1rem;
+}
+
+.lmh-username, .lmh-password {
+    border-bottom: 0.125rem solid #06c;
+    padding: 0 0 0 0.75rem;
+    color: #06c;
+}
+
+.lmh-username .fas, .lmh-password .fas {
+    display: block;
+    line-height: 2;
+}
+
+.lmh-username:focus-within, .lmh-password:focus-within {
+    background-color: #e4f1fd;
+}
+
+.lmh-login .form-control {
+    margin-left: 1rem;
+    padding: 0 0.5rem;
+    border: 0;
+    line-height: 1;
+    color: #06c;
+    background-color: transparent;
+}
+
+/* Responsive CSS definitions -----------------------------------------------*/
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    /* Banner elements */
-    .lmh-banner .row {
-        width: 30rem;
+    .lmh-navbar .nav-item {
+        margin-right: 0.5rem;
     }
-    .lmh-logo img {
-        width: 100%;
+    .login-page .lmh-logo img {
+        width: 13rem;
     }
-    .device-detector {
-        width: 20rem;
-        display: block;
+    .login-page .lmh-name {
+        width: 14rem;
+        margin: auto;
+        padding: 1rem 0 0 0;
+    }
+    .line-republic {
+        font-size: 1.625rem;
+        padding-bottom: 0.875rem;
+    }
+    .line-lanretam {
+        font-size: 2.625rem;
+    }
+    .login-page .lmh-dept {
+        font-size: 1.75rem;
+    }
+    .lmh-login {
+        padding: 2rem 0 4rem 0;
+        width: 15rem;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    h1 {
+        font-weight: normal;
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .lmh-header {
+        text-align: left;
+    }
+    .lmh-logo {
+        padding: 1rem;
+    }
+    .lmh-logo img {
+        width: 5.625rem;
+    }
+    .lmh-name {
+        padding: 1.375rem 0 0 0;
+    }
+    .lmh-country {
+        font-size: 1.5rem;
+    }
+    .lmh-dept {
+        font-size: 1.25rem;
+    }
+    .lmh-navbar {
+        padding: 0 1rem;
+        font-size: 1rem;
+    }
     .lmh-slides {
         width: 15.5rem;
+        display: block;
+        margin-left: auto;
+    }
+    .login-page .lmh-banner {
+        padding: 5rem 0;
+    }
+    .login-page .lmh-logo {
+        text-align: left;
+    }
+    .login-page .lmh-logo img {
+        width: 100%;
+    }
+    .login-page .lmh-name {
+        padding: 2rem 0 0 1rem;
+        width: auto;
+        margin: 0;
+    }
+    .login-page .lmh-country {
+        padding: 0 0 1rem 0;
+        border-bottom: 0.125rem solid #000;
+    }
+    .line-republic {
+        font-size: 2.125rem;
+        padding-bottom: 1.375rem;
+    }
+    .line-lanretam {
+        font-size: 3.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .login-page .lmh-dept {
+        padding-top: 0.25rem;
+        font-size: 2.25rem;
+    }
+    .lmh-login {
+        padding: 0 0 4rem 0;
+        margin: auto;
+        width: 20rem;
+    }
+    .lmh-login legend {
+        font-size: 1.125rem;
     }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    /* Banner elements */
-    .lmh-banner .row {
-        height: 118px;
-        width: 36rem;
-        padding-top: 22px !important;
-        padding-bottom: 0 !important;
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    main {
+        margin-top: 0;
+    }
+    main#maincontent {
+        padding-left: 2.5rem;
+    }
+    .lmh-logo {
+        padding: 1.25rem 1rem;
+    }
+    .lmh-logo img {
+        width: 7.125rem;
+    }
+    .lmh-name {
+        padding: 2.25rem 0 0 0;
     }
     .lmh-country {
-        font-size: 1.6rem;
+        font-size: 1.625rem;
     }
-
     .lmh-dept {
-        font-size: 1.2rem;
+        font-size: 1.375rem;
     }
     .lmh-slides {
         width: 20rem;
     }
-    .gb-navbar {
-        font-size: 1.1rem;
+    .lmh-navbar {
+        font-size: 1.125rem;
     }
-    #section-sidebar-nav {
-        display: block !important;
+    .contentbox {
+        padding: 2rem 1rem;
+    }
+    #lmhSegment {
+        margin: 0;
+    }
+    #lmhSegmentNav {
+        display: block;
+        border: 0;
+        text-align: right;
+        padding: 0;
+    }
+    #page-title {
+        margin-bottom: 2rem;
+    }
+    .login-page .lmh-name {
+        padding: 1.5rem 0 0 1rem;
+    }
+    .line-republic {
+        font-size: 3rem;
+        padding-bottom: 1.875rem;
+    }
+    .line-lanretam {
+        font-size: 4.875rem;
+        padding-bottom: 1rem;
+    }
+    .login-page .lmh-dept {
+        padding-top: 0.25rem;
+        font-size: 3.25rem;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-}
-
-/* Print */
-@media print {
+    h1 {
+        font-size: 2.5rem;
+    }
 }
