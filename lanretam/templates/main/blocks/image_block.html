@@ -1,0 +1,21 @@
+{% load wagtailimages_tags %}
+
+{% image self.image scale-100 as tmp_img %}
+
+<figure>
+    <img
+        src="{{ tmp_img.url }}"
+        class="img-fluid"
+        alt="{{ tmp_img.alt }}"
+    />
+    {% if self.caption or self.attribution %}
+    <figcaption>
+        {% if self.caption %}
+            {{ self.caption }}
+        {% endif %}
+        {% if self.attribution %}
+            {{ self.attribution }}
+        {% endif %}
+    </figcaption>
+    {% endif %}
+</figure>

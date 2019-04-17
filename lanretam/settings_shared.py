@@ -25,6 +25,7 @@ INSTALLED_APPS += [  # noqa
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
+    'wagtail.contrib.styleguide',
     'wagtail.embeds',
     'wagtail.sites',
     'wagtail.users',
@@ -36,6 +37,7 @@ INSTALLED_APPS += [  # noqa
     'wagtail.core',
     'modelcluster',
     'taggit',
+    'wagtailfontawesome',
 
     'lanretam.main',
 ]

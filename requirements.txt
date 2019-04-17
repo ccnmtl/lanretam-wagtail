@@ -129,4 +129,5 @@ html5lib==1.0.1 # pyup: < 2
 Unidecode==1.0.23 # pyup: < 2.0
 Willow==1.1 # pyup < 1.2
 
-
+# wagtail additions
+wagtailfontawesome==1.1.4
