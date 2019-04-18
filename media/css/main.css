@@ -180,6 +180,33 @@ footer a:focus, footer a:active {
     background-color: #06c;
 }
 
+.block-table thead {
+    background-color: #3399cc;
+    color: #fff;
+}
+
+.block-table table tr {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.block-table table th,
+.block-table table td {
+    padding: 0.5rem;
+}
+
+/* .block-table .table {
+    table-layout: fixed;
+}*/
+
+.block-table_caption {
+    background-color: #3399cc;
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
 /* Footer -------------------------------------------------------------------*/
 
 footer {

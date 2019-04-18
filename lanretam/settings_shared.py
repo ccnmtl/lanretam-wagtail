@@ -26,6 +26,7 @@ INSTALLED_APPS += [  # noqa
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.contrib.styleguide',
+    'wagtail.contrib.table_block',
     'wagtail.embeds',
     'wagtail.sites',
     'wagtail.users',
