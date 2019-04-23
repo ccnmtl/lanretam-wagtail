@@ -18,3 +18,17 @@ class HomePage(Page):
     content_panels = Page.content_panels + [
         StreamFieldPanel('body'),
     ]
+    # Limits this page type to only HomePage
+    parent_page_types = []
+
+
+class ContentPage(Page):
+    body = StreamField(
+        BaseStreamBlock(),
+        verbose_name="Page content",
+        blank=True
+        )
+
+    content_panels = Page.content_panels + [
+        StreamFieldPanel('body'),
+    ]
