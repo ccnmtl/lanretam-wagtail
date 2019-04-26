@@ -313,6 +313,8 @@ footer {
     background-color: transparent;
 }
 
+
+
 /* Responsive CSS definitions -----------------------------------------------*/
 
 /* Small devices (landscape phones, 576px and up) */
@@ -464,7 +466,8 @@ footer {
     #lmhSegmentNav {
         display: block;
         border: 0;
-        text-align: right;
+        /* text-align: right;*/
+        text-align: left;
         padding: 0;
     }
     #page-title {
