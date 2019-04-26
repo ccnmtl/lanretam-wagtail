@@ -1,6 +1,6 @@
 {% load wagtailimages_tags %}
 
-{% image self.image scale-100 as tmp_img %}
+{% image self.image_file scale-100 as tmp_img %}
 
 <figure>
     <img
@@ -10,8 +10,11 @@
     />
     {% if self.caption or self.attribution %}
     <figcaption>
+        {% if self.caption_block %}
+            {{ self.caption_block }}
+        {% endif %}
         {% if self.caption %}
-            {{ self.caption }}
+            {{ self.caption|safe }}
         {% endif %}
         {% if self.attribution %}
             {{ self.attribution }}
