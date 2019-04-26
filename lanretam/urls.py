@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path, re_path
+from django.conf.urls import url
 from django.views.generic import TemplateView
 from django.views.static import serve
 import os.path
@@ -12,7 +13,11 @@ from wagtail.core import urls as wagtail_urls
 
 site_media_root = os.path.join(os.path.dirname(__file__), "../media")
 
-auth_urls = path('accounts/', include('django.contrib.auth.urls'))
+
+auth_urls = url(r'^accounts/', include('django.contrib.auth.urls'))
+if hasattr(settings, 'CAS_BASE'):
+    auth_urls = url(r'^accounts/', include('djangowind.urls'))
+
 
 urlpatterns = [
     auth_urls,
@@ -26,6 +31,7 @@ urlpatterns = [
     re_path(r'^documents/', include(wagtaildocs_urls)),
     re_path(r'', include(wagtail_urls)),
 ]
+
 
 if settings.DEBUG:
     import debug_toolbar

@@ -48,6 +48,10 @@ LOGIN_REDIRECT_URL = "/"
 
 WAGTAIL_SITE_NAME = 'Lanretam'
 
+WAGTAIL_FRONTEND_LOGIN_URL = '/accounts/login/'
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
 WIND_AFFIL_HANDLERS = ['lanretam.main.auth.WagtailEditorMapper',
                        'djangowind.auth.StaffMapper',
                        'djangowind.auth.SuperuserMapper']
