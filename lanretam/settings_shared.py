@@ -47,8 +47,8 @@ THUMBNAIL_SUBDIR = "thumbs"
 LOGIN_REDIRECT_URL = "/"
 
 WAGTAIL_SITE_NAME = 'Lanretam'
-
 WAGTAIL_FRONTEND_LOGIN_URL = '/accounts/login/'
+PASSWORD_REQUIRED_TEMPLATE = 'main/login/password_required.html'
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
