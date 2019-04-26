@@ -222,6 +222,7 @@ footer {
 .login-page main {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    padding-bottom: 5rem;
 }
 
 .login-page .lmh-banner {
@@ -273,8 +274,8 @@ footer {
 
 .lmh-login legend {
     text-align: left;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.25rem;
+    font-weight: 300;
     margin-bottom: 1rem;
 }
 
@@ -313,6 +314,105 @@ footer {
     background-color: transparent;
 }
 
+.lmh-login .errorlist {
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: .5rem 1em;
+    color: #c00;
+    background-color: #fbe9eb;
+    border: 1px solid #f5c6cb;
+    border-radius: 0.25rem;
+}
+
+.login-page footer {
+    padding-top: 2rem;
+}
+
+.login-page footer img#amdd-logo {
+    height: 3.5rem;
+}
+
+.login-page footer img#ctl-logo {
+    height: 2.75rem;
+}
+
+.login-page footer a:focus,
+.login-page footer a:active {
+    border: 0;
+    outline: 0.125rem dashed #06f;
+    background-color: transparent !important;
+}
+
+/* CMS Login page ---------------------------------------------------------------*/
+
+.cms-login-page main {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 10rem;
+    background-color: #e4f1fd;
+}
+
+.cms-login-page .lmh-banner {
+    padding: 1rem 0;
+}
+
+.cms-login-page .lmh-logo {
+    text-align: center;
+    padding: 0;
+}
+
+.cms-login-page .lmh-logo img {
+    width: 50%;
+}
+
+.cms-login-page .lmh-name {
+    text-align: center;
+    margin: 0;
+    padding: 1rem 3rem 0 3rem;
+}
+
+.cms-login-page .lmh-country {
+    padding: 0 0 0.5rem 0;
+    border-bottom: 0.125rem solid #000;
+}
+
+.cms-login-page .line-republic {
+    display: block;
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+}
+
+.cms-login-page .line-lanretam {
+    display: block;
+    font-size: 2rem;
+    padding-bottom: 0rem;
+    line-height: 1.2;
+}
+
+.cms-login-page .lmh-dept {
+    padding-top: 0.5rem;
+    font-size: 1.375rem;
+}
+
+.cms-login-page footer {
+    padding-top: 2rem;
+}
+
+.cms-login-page footer img#amdd-logo {
+    height: 3.5rem;
+}
+
+.cms-login-page footer img#ctl-logo {
+    height: 2.75rem;
+}
+
+.cms-login-page footer a:focus,
+.cms-login-page footer a:active {
+    border: 0;
+    outline: 0.125rem dashed #06f;
+    background-color: transparent !important;
+}
+
 /* Responsive CSS definitions -----------------------------------------------*/
 
 /* Small devices (landscape phones, 576px and up) */
@@ -341,6 +441,25 @@ footer {
     .lmh-login {
         padding: 2rem 0 4rem 0;
         width: 15rem;
+    }
+    .cms-login-page .lmh-logo img {
+        width: 13rem;
+    }
+    .cms-login-page .lmh-name {
+        width: 14rem;
+        margin: auto;
+        padding: 1rem 0 0 0;
+    }
+    .cms-login-page .line-republic {
+        font-size: 1.625rem;
+        padding-bottom: 0.875rem;
+    }
+    .cms-login-page .line-lanretam {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    .cms-login-page .lmh-dept {
+        font-size: 1.75rem;
     }
 }
 
@@ -416,7 +535,39 @@ footer {
         width: 20rem;
     }
     .lmh-login legend {
-        font-size: 1.125rem;
+        font-size: 1.75rem;
+        font-weight: 300;
+    }
+    .cms-login-page .lmh-banner {
+        padding: 5rem 0 3rem 0 ;
+    }
+    .cms-login-page .lmh-logo {
+        text-align: right;
+    }
+    .cms-login-page .lmh-logo img {
+        width: 10rem;
+    }
+    .cms-login-page .lmh-name {
+        text-align: left;
+        padding: 1rem 0 0 1rem;
+        width: auto;
+        margin: 0;
+    }
+    .cms-login-page .lmh-country {
+        padding: 0 0 0.5rem 0;
+        border-bottom: 0.125rem solid #000;
+    }
+    .cms-login-page .line-republic {
+        font-size: 2.125rem;
+        padding-bottom: 1.375rem;
+    }
+    .cms-login-page .line-lanretam {
+        font-size: 2rem;
+        padding-bottom: 0;
+    }
+    .cms-login-page .lmh-dept {
+        padding-top: 0.25rem;
+        font-size: 1.75rem;
     }
 }
 
@@ -485,11 +636,53 @@ footer {
         padding-top: 0.25rem;
         font-size: 3.25rem;
     }
+    .login-page footer img#amdd-logo {
+        height: 4rem;
+    }
+    .login-page footer img#ctl-logo {
+        height: 4rem;
+    }
+    .cms-login-page .lmh-name {
+        text-align: left;
+        padding: 2rem 0 0 1rem;
+    }
+    .cms-login-page .lmh-logo img {
+        width: 14rem;
+    }
+    .cms-login-page .lmh-name {
+        padding: 1.5rem 0 0 1rem;
+    }
+    .cms-login-page .line-republic {
+        font-size: 3rem;
+        padding-bottom: 1.875rem;
+    }
+    .cms-login-page .line-lanretam {
+        font-size: 2.75rem;
+        padding-bottom: 0;
+    }
+    .cms-login-page .lmh-dept {
+        padding-top: 0.25rem;
+        font-size: 2.5rem;
+    }
+    .cms-login-page footer img#amdd-logo {
+        height: 4rem;
+    }
+    .cms-login-page footer img#ctl-logo {
+        height: 4rem;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     h1 {
         font-size: 2.5rem;
+    }
+    .cms-login-page .line-lanretam {
+        font-size: 3rem;
+        padding-bottom: 0;
+    }
+    .cms-login-page .lmh-dept {
+        padding-top: 0.25rem;
+        font-size: 2.75rem;
     }
 }
