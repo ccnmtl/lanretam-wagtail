@@ -10,7 +10,9 @@ class ImageBlock(StructBlock):
     attribution data
     """
     image_file = ImageChooserBlock(required=True)
-    caption_block = RichTextBlock(required=False)
+    caption_block = RichTextBlock(
+                        help_text='Caption block for the image',
+                        required=False)
     caption = CharBlock(
                         help_text='Caption for the image',
                         required=False)

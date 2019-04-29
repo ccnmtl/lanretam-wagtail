@@ -18,7 +18,7 @@ class HomePage(Page):
         StreamFieldPanel('body'),
     ]
     # Limits this page type to only HomePage
-    parent_page_types = []
+    # parent_page_types = []
 
 
 class ContentPage(Page):
