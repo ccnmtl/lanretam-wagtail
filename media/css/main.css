@@ -155,6 +155,18 @@ h2 {
     text-decoration: none;
 }
 
+#lmhSegment .nav-link.depth-6 {
+    padding-left: 2.5rem;
+}
+
+#lmhSegment .depth-6::before {
+    content: "\0025cf";
+    font-size: 0.75rem;
+    color: #999;
+    padding-right: 0.5rem;
+    margin-left: -1.5rem;
+}
+
 /* Content ---------------------------------------------------------------*/
 
 .contentbox {
