@@ -16,109 +16,24 @@
 <main class="col-12 col-lg-9 order-2" id="maincontent" aria-labelledby="page-title">
 <h1 id="page-title">{{ page.title }}</h1>
 {{ page.body }}
-
-
-<h3>Dump</h3>
-
-
-                {% for post in home_page.get_children %}
-                {% with post=post.specific %}
-                {{post.title}}<br />
-                {% endwith %}
-                {% endfor %}
-
-
-<hr/>
-
-<h3>Sidemenu</h3>
-
-{% with module=self.module %}
-    <a href="{{ module.url }}">{{ module.title }}</a>
-    {% if module.id == self.id %}
-        (active)
-    {% endif %}
-    <br />
-{% endwith %}
-
-{% for item in self.sidemenu %}
-    <a href="{{ item.url }}" class="depth_{{ item.depth }}">- {{ item.title }}</a>
-    {% if item.id == self.id %}
-        (active)
-    {% endif %}
-    <br />
-{% endfor %}
-
-<hr/>
-
-
-
-<hr/>
-
-<h3>Parent</h3>
-   <a href="{{ self.get_parent.url }}">{{ self.get_parent.title }}</a><br />
-
-<hr />
-
-<h3>Ancestors</h3>
-
-{% for ancestor in self.get_ancestors %}
-   <a href="{{ ancestor.url }}">{{ ancestor.title }}</a><br />
-{% endfor %}
-
-<hr />
-
-<h3>Descendants</h3>
-
-{% for descendant in self.get_descendants %}
-   <a href="{{ descendant.url }}">{{ descendant.title }}</a><br />
-{% endfor %}
-
-<hr />
-
-<h3>Siblings</h3>
-
-{% for sibling in self.get_siblings %}
-   <a href="{{ sibling.url }}">{{ sibling.title }}</a><br />
-{% endfor %}
-
-<hr />
-<h3>Children</h3>
-
-{% for child in self.get_children %}
-   <a href="{{ child.url }}">{{ child.title }}</a><br />
-{% endfor %}
-
-
-
 </main>
-        <nav class="navbar navbar-expand-lg col-12 col-lg-3 d-print-none order-1" aria-label="Segment" id="lmhSegmentNav">
-            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#lmhSegment" aria-controls="lmhSegment" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> Segment menu
-            </button>
-            <div class="collapse navbar-collapse" id="lmhSegment"> 
-
-
-
-
-
-                    <!--
- <ul class="navbar-nav flex-column">
-               <li class="nav-item active">
-                    <a class="nav-link" href="#">Placeholder</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Placeholder</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Placeholder</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Placeholder</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Placeholder</a>
-              </ul>
-                    </li>
- -->            </div>
-        </nav>
+<nav class="navbar navbar-expand-lg col-12 col-lg-3 d-print-none order-1" aria-label="Segment" id="lmhSegmentNav">
+    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#lmhSegment" aria-controls="lmhSegment" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> Segment menu
+    </button>
+    <div class="collapse navbar-collapse" id="lmhSegment"> 
+        <ul class="navbar-nav flex-column">
+            {% with module=page.module %}
+            <li class="nav-item{% if module.id == page.id %} active{% endif %}">
+            <a class="nav-link" href="{{ module.url }}">{{ module.title }}</a>
+            </li>
+            {% endwith %}
+            {% for item in page.sidemenu %}
+            <li class="nav-item{% if item.id == page.id %} active{% endif %}">
+            <a class="nav-link depth-{{ item.depth }}" href="{{ item.url }}">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
 {% endblock %}
