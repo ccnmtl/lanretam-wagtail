@@ -219,6 +219,19 @@ footer a:focus, footer a:active {
     font-weight: 700;
 }
 
+.richtext-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.richtext-image.right {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+
 /* Footer -------------------------------------------------------------------*/
 
 footer {
@@ -454,6 +467,9 @@ footer {
         padding: 2rem 0 4rem 0;
         width: 15rem;
     }
+    .richtext-image.right {
+        width: auto;
+    }
     .cms-login-page .lmh-logo img {
         width: 13rem;
     }
@@ -510,6 +526,12 @@ footer {
         width: 15.5rem;
         display: block;
         margin-left: auto;
+    }
+    .richtext-image.right {
+        float: right;
+        margin-left: 1rem;
+        margin-right: 0;
+        margin-bottom: 1rem;
     }
     .login-page .lmh-banner {
         padding: 5rem 0;
