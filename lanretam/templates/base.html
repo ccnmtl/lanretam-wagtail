@@ -68,18 +68,20 @@
         </div><!-- /.lmh-banner -->       
         <nav class="navbar navbar-expand lmh-navbar" aria-label="Lanretam site">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/"><i class="fas fa-home fa-lg d-inline d-md-none" aria-label="Home"></i><span class="sr-only">Lanretam</span><span class="d-none d-md-inline">Home</span><span class="sr-only">(current)</span></a>
+            {% with module=self.module %}
+                <li class="nav-item{% if module == '' %} active{% endif %}">
+                    <a class="nav-link" href="/"><i class="fas fa-home fa-lg d-inline d-md-none" aria-label="Home"></i><span class="sr-only">Lanretam</span><span class="d-none d-md-inline">Home</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item{% if module.slug == 'about' %} active{% endif %}">
                     <a class="nav-link" href="/about/"><span class="d-none d-sm-inline">About Lanretam Ministry of Health</span><span class="d-block d-sm-none">Ministry</a></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item{% if module.slug == 'directorates' %} active{% endif %}">
                     <a class="nav-link" href="/directorates/">Directorates</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item{% if module.slug == 'programmes' %} active{% endif %}">
                     <a class="nav-link" href="/programmes/">Programmes</a>
                 </li>
+            {% endwith %}
             </ul>
         </nav>
     </header>
