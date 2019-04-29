@@ -44,7 +44,7 @@ INSTALLED_APPS += [  # noqa
 ]
 
 THUMBNAIL_SUBDIR = "thumbs"
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/cms/"
 
 WAGTAIL_SITE_NAME = 'Lanretam'
 WAGTAIL_FRONTEND_LOGIN_URL = '/accounts/login/'
