@@ -8,7 +8,7 @@
         class="img-fluid"
         alt="{{ tmp_img.alt }}"
     />
-    {% if self.caption or self.attribution %}
+    {% if self.caption or self.attribution or self.caption_block %}
     <figcaption>
         {% if self.caption_block %}
             {{ self.caption_block }}
