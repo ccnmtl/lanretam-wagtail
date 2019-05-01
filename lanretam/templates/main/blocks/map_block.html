@@ -1,7 +1,8 @@
-<link rel="stylesheet" href="/media/css/map.css">
+{% load static %}
+<link rel="stylesheet" href='{% static "css/map.css" %}'>
 
 <div class="map-container">
-<h3>Show layers</h3>
+<h3>Show layers:</h3>
     <div class="map-checker d-flex flex-wrap">
         <label for="layer-electriccell"><input type="checkbox" name="layer_viz" id="layer-electriccell" data-target="electriccell"> Electric and Cellphones</label>
         <label for="layer-hospitals"><input type="checkbox" name="layer_viz" id="layer-hospitals" data-target="hospitals"> Hospitals</label>
@@ -10,68 +11,68 @@
     </div>
     <div class="map-layers">
         <div id="map-basic">
-            <img src="/media/img/maps/base_map.jpg" class="img-fluid" alt="base_map">
+            <img src='{% static "img/maps/base_map.jpg" %}' class="img-fluid" alt="base_map">
         </div>
         <div class="map-item" id="map-referralzones">
-            <img src="/media/img/maps/layer_referralzones.png" class="img-fluid" alt="base_map">
+            <img src='{% static "img/maps/layer_referralzones.png" %}' class="img-fluid" alt="base_map">
         </div>
         <div class="map-item" id="map-population">
-            <img src="/media/img/maps/layer_population.png" class="img-fluid" alt="base_map">
+            <img src='{% static "img/maps/layer_population.png" %}' class="img-fluid" alt="base_map">
         </div>
         <div class="map-item" id="map-electriccell">
-            <img src="/media/img/maps/layer_electriccell.png" class="img-fluid" alt="base_map">
+            <img src='{% static "img/maps/layer_electriccell.png" %}' class="img-fluid" alt="base_map">
         </div>
         <div class="map-item" id="map-labels">
-            <img src="/media/img/maps/layer_labels.png" class="img-fluid" alt="base_map">
+            <img src='{% static "img/maps/layer_labels.png" %}' class="img-fluid" alt="base_map">
         </div>
         <div class="map-item" id="map-hospitals">
-            <img src="/media/img/maps/layer_hospitals.png" class="img-fluid" alt="base_map">
+            <img src='{% static "img/maps/layer_hospitals.png" %}' class="img-fluid" alt="base_map">
         </div>
     </div>
     <div class="map-legend row">
         <div class="col-6 col-md-3 legend-box" id="legend-basic">
             <dl class="d-flex flex-wrap">
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_national_capital.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_national_capital.svg" %}' /></dt>
                     <dd class="legend-def">National capital</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_provincial_capital.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_provincial_capital.svg" %}' /></dt>
                     <dd class="legend-def">Provincial capital</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_paved_road.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_paved_road.svg" %}' /></dt>
                     <dd class="legend-def">Paved road</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_dirt_road.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_dirt_road.svg" %}' /></dt>
                     <dd class="legend-def">Dirt road</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_dirt_road_i.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_dirt_road_i.svg" %}' /></dt>
                     <dd class="legend-def">Dirt road-impassable in rainy season</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_river.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_river.svg" %}' /></dt>
                     <dd class="legend-def">River</dd>
             </dl>
         </div>
         <div class="col-6 col-md-3 legend-box" id="legend-electriccell">
             <dl class="d-flex flex-wrap">
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_power.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_power.svg" %}' /></dt>
                     <dd class="legend-def">Electrical power grid</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_power_phone.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_power_phone.svg" %}' /></dt>
                     <dd class="legend-def">Both power grid and cell phone coverage</dd>
             </dl>
         </div>
         <div class="col-6 col-md-3 legend-box" id="legend-hospitals">
             <dl class="d-flex flex-wrap">
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_hospital_univ.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_hospital_univ.svg" %}' /></dt>
                 <dd class="legend-def">Central/University hospital</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_hospital_prov.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_hospital_prov.svg" %}' /></dt>
                 <dd class="legend-def">Provincial hospital</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_hospital_dist.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_hospital_dist.svg" %}' /></dt>
                 <dd class="legend-def">District hospital</dd>
             </dl>
         </div>
         <div class="col-6 col-md-3 legend-box" id="legend-population">
             <dl class="d-flex flex-wrap">
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_pop1.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_pop1.svg" %}' /></dt>
                 <dd class="legend-def">&lt;50 people/sq. mi.</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_pop2.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_pop2.svg" %}' /></dt>
                 <dd class="legend-def">50&ndash;1000 people/sq. mi.</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_pop3.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_pop3.svg" %}' /></dt>
                 <dd class="legend-def">1000&ndash;3500 people/sq. mi</dd>
-                <dt class="legend-icon"><img src="/media/img/maps/legend/legend_pop4.svg" /></dt>
+                <dt class="legend-icon"><img src='{% static "img/maps/legend/legend_pop4.svg" %}' /></dt>
                 <dd class="legend-def">&gt;3500 people/sq. mi.</dd>
             </dl>
         </div>
@@ -79,4 +80,4 @@
         <div id="legend-referralzones"></div>
 </div>
 
-<script src="/media/js/lanretam_map.js"></script>
+<script src='{% static "js/lanretam_map.js" %}'></script>
