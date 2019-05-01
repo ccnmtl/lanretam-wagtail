@@ -194,11 +194,11 @@ figure img {
 }
 
 #lmhSegment .depth-6::before {
-    content: "\0025cf";
-    font-size: 0.75rem;
-    color: #999;
-    padding-right: 0.5rem;
-    margin-left: -1.5rem;
+    content: "\0025cb";
+    font-size: 0.625rem;
+    color: #666;
+    padding-right: 0.75rem;
+    margin-left: -1.25rem;
 }
 
 /* Content ---------------------------------------------------------------*/
