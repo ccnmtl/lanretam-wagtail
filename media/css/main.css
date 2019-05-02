@@ -240,7 +240,9 @@ footer a:focus, footer a:active {
 .block-table table th,
 .block-table table td {
     padding: 0.5rem;
+    border-color: #ccc;
 }
+
 
 /* .block-table .table {
     table-layout: fixed;
