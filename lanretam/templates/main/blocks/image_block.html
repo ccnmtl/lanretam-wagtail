@@ -1,13 +1,7 @@
 {% load wagtailimages_tags %}
 
-{% image self.image_file scale-100 as tmp_img %}
-
 <figure>
-    <img
-        src="{{ tmp_img.url }}"
-        class="img-fluid"
-        alt="{{ tmp_img.alt }}"
-    />
+    {% image self.image_file original class="img-fluid"  %}
     {% if self.caption or self.attribution or self.caption_block %}
     <figcaption>
         {% if self.caption_block %}

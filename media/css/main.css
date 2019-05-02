@@ -158,7 +158,8 @@ figure img {
 
 #lmhSegmentNav .navbar-toggler {
     font-size: 1rem;
-    color: #666;
+    color: #005c8a;
+    font-weight: 600;
 }
 
 #lmhSegment {
@@ -194,11 +195,11 @@ figure img {
 }
 
 #lmhSegment .depth-6::before {
-    content: "\0025cf";
-    font-size: 0.75rem;
-    color: #999;
-    padding-right: 0.5rem;
-    margin-left: -1.5rem;
+    content: "\0025cb";
+    font-size: 0.625rem;
+    color: #666;
+    padding-right: 0.75rem;
+    margin-left: -1.25rem;
 }
 
 /* Content ---------------------------------------------------------------*/
@@ -689,7 +690,7 @@ footer {
         font-size: 1.125rem;
     }
     .contentbox {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 4rem 1rem;
     }
     #lmhSegment {
         margin: 0;
