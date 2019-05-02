@@ -13,6 +13,7 @@
 
     <!-- Project CSS -->
     <link rel="stylesheet" href="{{STATIC_URL}}css/main.css">
+    <link rel="stylesheet" href="{{STATIC_URL}}css/print.css">
     <meta name="theme-color" content="#d4e3fc">
 
     <!-- FontAwesome CSS -->
@@ -49,7 +50,7 @@
                 <div class="lmh-country" aria-hidden="true">The Republic of Lanretam</div>
                 <div class="lmh-dept" aria-hidden="true">Ministry of Health</div>
             </div>
-            <div class="lmh-slides carousel slide carousel-fade" data-ride="carousel" data-interval="3000" aria-hidden="true">
+            <div class="lmh-slides carousel slide carousel-fade d-print-none" data-ride="carousel" data-interval="3000" aria-hidden="true">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="{{STATIC_URL}}img/banner02.jpg" alt="First slide">
@@ -66,7 +67,7 @@
                 </div>
             </div>
         </div><!-- /.lmh-banner -->       
-        <nav class="navbar navbar-expand lmh-navbar" aria-label="Lanretam site">
+        <nav class="navbar navbar-expand lmh-navbar d-print-none" aria-label="Lanretam site">
             <ul class="navbar-nav">
             {% with module=self.module %}
                 <li class="nav-item{% if module == '' %} active{% endif %}">
@@ -99,13 +100,10 @@
         <span class="d-none d-sm-block d-md-none">SM: Phone</span>
         <span class="d-block d-sm-none">XS: Phone</span>
         </section>
+    <p class="d-none d-print-block font-weight-bold">Printed from: https://lanretam.ctl.columbia.edu</p>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="{{STATIC_URL}}css/bootstrap-4.3.1/js/bootstrap.min.js"></script>
-    <script
-        type="text/javascript"
-        data-main="{{STATIC_URL}}js/src/main.js"
-        src="{{STATIC_URL}}js/lib/require/require.js"></script>
 </body>
 </html>
