@@ -1,6 +1,3 @@
-@page  {
-	margin: 1in;
-}
 @media print {
     body { background-color: transparent; }
     h1 {
@@ -49,9 +46,12 @@
     .contentbox {
         display: block !important;
     }
-    main p, main li, main div,
-    main table * { font-size: 1.5rem; }
-    
+    main p, main li, main div, main table * { font-size: 1.5rem; }
+    main a[href]:after {
+        content: " (" attr(href) ")";
+        font-style: italic;
+        color: #666 !important;
+    }
     .block-table_caption {
         background-color: transparent;
         color: #3399cc;
@@ -74,6 +74,15 @@
     }
     .table-responsive {
         width: auto;
+        page-break-inside: avoid;
+    }
+    .block-table table * {
+        font-size: 1.25rem;
+        width: auto;
+    }
+    .block-table table th,
+    .block-table table td {
+        padding: 0.25rem;
     }
     .richtext-image.right {
         float: right;
