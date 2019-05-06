@@ -49,5 +49,6 @@ class BaseStreamBlock(StreamBlock):
     sr_text = TextBlock(
                         required=False,
                         icon='fa-universal-access',
-                        label='SR text')
+                        label='SR text',
+                        template='main/blocks/screen_reader_block.html')
     map_block = MapBlock()
