@@ -1,1 +1,2 @@
-# lanretam [![Build Status](https://travis-ci.org/ccnmtl/lanretam-wagtail.svg?branch=master)](https://travis-ci.org/ccnmtl/lanretam-wagtail) [![Greenkeeper badge](https://badges.greenkeeper.io/ccnmtl/lanretam-wagtail.svg)](https://greenkeeper.io/)
+# Lanretam [![Build Status](https://travis-ci.org/ccnmtl/lanretam-wagtail.svg?branch=master)](https://travis-ci.org/ccnmtl/lanretam-wagtail) [![Greenkeeper badge](https://badges.greenkeeper.io/ccnmtl/lanretam-wagtail.svg)](https://greenkeeper.io/)
+Lanretam is a web-based case study developed by The Averting Maternal Death and Disability Program (AMDD) at the Heilbrunn Department of Population and Family Health at the Mailman School of Public Health, Columbia University, and the Center for Teaching and Learning.
