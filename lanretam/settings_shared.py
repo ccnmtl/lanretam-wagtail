@@ -49,7 +49,7 @@ LOGOUT_REDIRECT_URL = "/cms/"
 
 WAGTAIL_SITE_NAME = 'Lanretam'
 WAGTAIL_FRONTEND_LOGIN_URL = '/accounts/login/'
-PASSWORD_REQUIRED_TEMPLATE = 'main/login/password_required.html'
+PASSWORD_REQUIRED_TEMPLATE = 'main/login/password_required.html'  # nosec
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
