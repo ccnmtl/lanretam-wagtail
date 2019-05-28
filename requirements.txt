@@ -125,7 +125,7 @@ entrypoints==0.3
 wagtail==2.5.1
 django-modelcluster==4.4  # pyup: < 5.0 
 django-treebeard==4.3 # pyup: < 5.0
-draftjs_exporter==2.1.5  # pyup: < 3.0
+draftjs_exporter==2.1.6  # pyup: < 3.0
 html5lib==1.0.1 # pyup: < 2
 Unidecode==1.0.23 # pyup: < 2.0
 Willow==1.1 # pyup < 1.2
