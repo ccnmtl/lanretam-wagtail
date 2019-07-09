@@ -60,7 +60,10 @@ faker==1.0.7  # factory_boy
 factory_boy==2.12.0
 ldap3==2.6
 sqlparse==0.3.0
-boto==2.49.0
+s3transfer==0.2.1
+jmespath==0.9.4
+botocore==1.12.182
+boto3==1.9.180
 python-dateutil==2.8.0
 
 djangowind==1.2.1
