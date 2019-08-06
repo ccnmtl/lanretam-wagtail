@@ -127,7 +127,7 @@ django-contact-us==0.4.1
 entrypoints==0.3
 
 # wagtail requirements
-wagtail==2.5.1
+wagtail==2.6.1
 django-modelcluster==4.4  # pyup: < 5.0 
 django-treebeard==4.3 # pyup: < 5.0
 draftjs_exporter==2.1.6  # pyup: < 3.0
