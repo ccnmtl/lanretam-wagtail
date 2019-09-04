@@ -96,7 +96,7 @@ django-infranil==1.1.0
 django-flatblocks==0.9.4
 django-storages==1.7.1
 
-djangorestframework==3.10.2  # pyup: < 4.0
+djangorestframework==3.10.3  # pyup: < 4.0
 
 ccnmtlsettings==1.5.0
 
