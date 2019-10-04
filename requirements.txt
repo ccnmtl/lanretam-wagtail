@@ -1,7 +1,7 @@
-Django==2.2.5  # pyup: < 2.3
+Django==2.2.6  # pyup: < 2.3
 
 pytz==2019.2
-httplib2==0.13.1
+httplib2==0.14.0
 feedparser==5.2.1
 Markdown==2.6.11 # pyup: < 3
 psycopg2==2.8.3
@@ -22,18 +22,18 @@ cssselect==1.1.0
 lxml==4.4.1
 fuzzywuzzy==0.17.0
 sure==1.4.11
-traitlets==4.3.2  # ipython
+traitlets==4.3.3  # ipython
 ipython_genutils==0.2.0  # ipython
 decorator==4.4.0  # ipython
 ptyprocess==0.6.0  # ipython
 pexpect==4.7.0  # ipython
-pathlib2==2.3.4  # ipython
+pathlib2==2.3.5  # ipython
 pickleshare==0.7.5  # ipython
 simplegeneric==0.8.1  # ipython
 path.py==12.0.1  # ipython
 backports.shutil_get_terminal_size==1.0.0  # ipython
 wcwidth==0.1.7  # ipython
-prompt_toolkit==2.0.9  # ipython
+prompt_toolkit==2.0.10  # ipython
 pygments==2.4.2  # ipython
 scandir==1.10.0  # ipython
 ipython==7.8.0
@@ -53,7 +53,7 @@ requests==2.22.0  # pyup: < 3.0
 logilab-common==1.4.3
 logilab-astng==0.24.3
 astroid==2.3.1
-pylint==2.4.1
+pylint==2.4.2
 six==1.12.0 # pyup: < 2.0
 ipaddress==1.0.22  # faker
 faker==2.0.2  # factory_boy
@@ -131,7 +131,7 @@ entrypoints==0.3
 wagtail==2.6.2
 django-modelcluster==4.4  # pyup: < 5.0 
 django-treebeard==4.3 # pyup: < 5.0
-draftjs_exporter==2.1.6  # pyup: < 3.0
+draftjs_exporter==2.1.7  # pyup: < 3.0
 html5lib==1.0.1 # pyup: < 2
 Unidecode==1.1.1 # pyup: < 2.0
 Willow==1.1 # pyup < 1.2
