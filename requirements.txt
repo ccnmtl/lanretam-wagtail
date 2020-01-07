@@ -115,7 +115,7 @@ entrypoints==0.3
 
 # wagtail requirements
 wagtail==2.6.3
-django-modelcluster==5.0  # pyup: < 6.0 
+django-modelcluster==5.0.1  # pyup: < 6.0 
 django-treebeard==4.3.1 # pyup: < 5.0
 draftjs_exporter==2.1.7  # pyup: < 3.0
 html5lib==1.0.1 # pyup: < 2
