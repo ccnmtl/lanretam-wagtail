@@ -56,3 +56,5 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 WIND_AFFIL_HANDLERS = ['lanretam.main.auth.WagtailEditorMapper',
                        'djangowind.auth.StaffMapper',
                        'djangowind.auth.SuperuserMapper']
+
+WAGTAILADMIN_STATIC_FILE_VERSION_STRINGS = True
