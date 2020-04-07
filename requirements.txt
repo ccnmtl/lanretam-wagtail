@@ -4,7 +4,7 @@ pytz==2019.2
 httplib2==0.17.0
 feedparser==5.2.1
 Markdown==2.6.11 # pyup: < 3
-psycopg2==2.8.4
+psycopg2==2.8.5
 # Pillow specific for wagtail
 Pillow==6.2.2  # pyup: < 7.0.0
 versiontools==1.9.1
