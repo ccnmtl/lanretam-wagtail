@@ -35,7 +35,7 @@ idna==2.9  # requests
 certifi==2020.4.5.1  # requests, sentry-sdk
 # wagtail recs
 requests==2.23.0  # pyup: < 3.0
-logilab-common==1.5.2
+logilab-common==1.6.0
 logilab-astng==0.24.3
 astroid==2.3.3
 pylint==2.4.4
