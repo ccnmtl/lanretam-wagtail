@@ -3,7 +3,7 @@ Django==2.2.12  # pyup: < 2.3
 pytz==2020.1
 httplib2==0.17.3
 feedparser==5.2.1
-Markdown==3.1.1 # pyup: < 3
+Markdown==3.2.1
 psycopg2==2.8.5
 # Pillow specific for wagtail
 Pillow==6.2.2  # pyup: < 7.0.0
@@ -12,7 +12,7 @@ statsd==3.3.0
 pep8==1.7.1
 pyflakes==2.2.0
 mccabe==0.6.1
-configparser==4.0.2 # pyup: <5.0.0
+configparser==5.0.0
 pycodestyle==2.6.0
 importlib-metadata==1.6.0  # for flake8
 zipp==3.1.0  # for flake8
@@ -104,9 +104,6 @@ oauth2==1.9.0.post1
 oauthlib==3.1.0
 pylti==0.7.0
 django-lti-provider==0.4.0
-
-pyparsing==2.4.7
-edtf==4.0.1 # pyup: <4.0.0
 
 pbr==5.4.5 # bandit
 pyyaml==5.3.1 # bandit
