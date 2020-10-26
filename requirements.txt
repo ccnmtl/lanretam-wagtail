@@ -22,7 +22,7 @@ tornado==6.0.4
 beautifulsoup4==4.9.3
 soupsieve==2.0.1
 cssselect==1.1.0
-lxml==4.5.2
+lxml==4.6.1
 fuzzywuzzy==0.18.0
 sure==1.4.11
 traitlets==4.3.3  # ipython
@@ -32,7 +32,7 @@ cryptography==3.1.1  # pyOpenSSL
 pyOpenSSL==19.1.0
 ndg-httpsclient==0.5.1
 # requests
-urllib3==1.25.10  # sentry-sdk
+urllib3==1.25.11  # sentry-sdk
 chardet==3.0.4  # requests
 idna==2.10  # requests
 certifi==2020.6.20  # requests, sentry-sdk
@@ -52,7 +52,7 @@ sqlparse==0.3.1
 s3transfer==0.3.3
 jmespath==0.10.0
 
-botocore>=1.15.0,<1.19.0
+botocore>=1.15.0,<1.20.0
 boto3>=1.12.0,<1.17.0
 
 python-dateutil==2.8.1
@@ -68,7 +68,7 @@ rjsmin==1.1.0  # django-compressor
 django-compressor==2.4
 django-statsd-mozilla==0.4.0
 raven==6.10.0
-sentry-sdk==0.19.0
+sentry-sdk==0.19.1
 django-bootstrap4==1.1.1
 django-debug-toolbar==2.2
 django-waffle==2.0.0
@@ -104,7 +104,7 @@ oauthlib==3.1.0
 pylti==0.7.0
 django-lti-provider==0.4.0
 
-pbr==5.5.0 # bandit
+pbr==5.5.1 # bandit
 pyyaml==5.3.1 # bandit
 stevedore==1.32.0  # bandit
 bandit==1.6.2
