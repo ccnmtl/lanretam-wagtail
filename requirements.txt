@@ -116,7 +116,7 @@ django-contact-us==0.4.4
 entrypoints==0.3
 
 # wagtail requirements
-wagtail==2.10.2
+wagtail==2.12.3
 django-modelcluster>=5.0.1,<6.0 
 django-treebeard>=4.3.1,<5.0
 django-filter>=2.2,<3.0
@@ -131,3 +131,4 @@ wagtailfontawesome==1.2.1
 l18n==2020.6.1
 
 tablib==2.0.0
+anyascii==0.1.7
