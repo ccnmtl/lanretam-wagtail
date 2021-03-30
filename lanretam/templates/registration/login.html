@@ -11,21 +11,18 @@
     <div class="loginbox">
         <h2>Choose a login option...</h2>
         <div class="content">
-            {% if CAS_BASE %}
-                <form method="get" action="{{ CAS_BASE }}cas/login">
-                    {% csrf_token %}
-                    <input type="hidden" name="destination"
-                           value="https://{{ request.get_host }}/accounts/caslogin/?next={{ next|urlencode }}" />
-                    <p>If you have a Columbia University Network ID (UNI)...</p>
-                    <input class="regbutton" type="submit" value="Columbia Log In" />
-                </form>
-            {% endif %}
-            
+            <form method="get" action="/cas/login">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="/admin/" />
+                <p>If you have a Columbia University Network ID (UNI)...</p>
+                <input class="regbutton" type="submit" value="Columbia Log In" />
+            </form>
+
             <p class="smalltxt"><a href="http://cuit.columbia.edu/cuit/manage-my-uni" title="Learn more about UNI" target="_blank">What is a UNI?</a></p>
             <!-- End UNI LOG IN -->
-            
+
             <hr class="seperator" />
-        
+
         {% if form.errors %}
             <p class="errornote">
                 <span>
@@ -34,7 +31,7 @@
                 Please try again. Note that both username and password are case-sensitive.
             </p>
         {% endif %}
-        
+
             <p>If you have a guest account...</p>
             <form id="login-local" name="login_local" method="post" action=".">
                 {% csrf_token %}
@@ -43,12 +40,12 @@
                         <label for="id_username">Username:</label>
                         {{ form.username }}
                     </div><!-- fieldwrapper -->
-                
+
                     <div class="fieldwrapper">
                         <label for="id_password">Password:</label>
                         {{ form.password }}
                     </div><!-- fieldwrapper -->
-                </div>      
+                </div>
                 <input class="regbutton" type="button" value="Guest Log In" {% if form.errors %}style="display: none"{% endif %}
                     onclick="jQuery('.login-local-form').show(); jQuery(this).hide(); return false;"/>
                 <input class="regbutton login-local-form" type="submit" value="Log In" {% if not form.errors %}style="display: none;"{% endif %} />                        

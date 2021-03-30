@@ -16,12 +16,19 @@ USE_TZ = True
 MIDDLEWARE += [  # noqa
     'wagtail.contrib.legacy.sitemiddleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    'django_cas_ng.middleware.CASMiddleware',
+]
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'django_cas_ng.backends.CASBackend'
 ]
 
 INSTALLED_APPS += [  # noqa
     'bootstrap4',
     'infranil',
     'django_extensions',
+    'django_cas_ng',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -43,6 +50,8 @@ INSTALLED_APPS += [  # noqa
     'lanretam.main',
 ]
 
+INSTALLED_APPS.remove('djangowind') # noqa
+
 THUMBNAIL_SUBDIR = "thumbs"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/cms/"
@@ -53,8 +62,35 @@ PASSWORD_REQUIRED_TEMPLATE = 'main/login/password_required.html'  # nosec
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
-WIND_AFFIL_HANDLERS = ['lanretam.main.auth.WagtailEditorMapper',
-                       'djangowind.auth.StaffMapper',
-                       'djangowind.auth.SuperuserMapper']
+WIND_AFFIL_HANDLERS = ['lanretam.main.auth.WagtailEditorMapper']
 
 WAGTAILADMIN_STATIC_FILE_VERSION_STRINGS = True
+
+CAS_SERVER_URL = 'https://cas.columbia.edu/cas/'
+CAS_VERSION = '3'
+CAS_ADMIN_REDIRECT = False
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(base, "templates"),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                # list if you haven't customized them:
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.template.context_processors.request',
+                'django.contrib.messages.context_processors.messages',
+                'stagingcontext.staging_processor',
+                'gacontext.ga_processor',
+            ],
+        },
+    },
+]
