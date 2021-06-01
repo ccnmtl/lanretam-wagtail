@@ -36,7 +36,7 @@ ndg-httpsclient==0.5.1
 urllib3==1.26.5  # sentry-sdk
 chardet==4.0.0  # requests
 idna==2.10  # requests
-certifi==2020.12.5  # requests, sentry-sdk
+certifi==2021.5.30  # requests, sentry-sdk
 # wagtail recs
 requests>=2.23.0,<3.0
 logilab-common==1.6.3
