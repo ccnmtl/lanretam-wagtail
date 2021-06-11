@@ -18,10 +18,10 @@ importlib-metadata==2.1.1  # for flake8
 typing_extensions==3.10.0.0
 zipp==3.1.0  # for flake8
 flake8==3.9.2
-tornado==6.0.4
+tornado==6.1
 # wagtail spec
 beautifulsoup4==4.9.3
-soupsieve==2.0.1
+soupsieve==2.2.1
 cssselect==1.1.0
 lxml==4.6.3
 fuzzywuzzy==0.18.0
@@ -39,7 +39,7 @@ idna==2.10  # requests
 certifi==2021.5.30  # requests, sentry-sdk
 # wagtail recs
 requests>=2.23.0,<3.0
-logilab-common==1.6.3
+logilab-common==1.8.1
 astroid==2.5.8
 pylint==2.5.2
 six==1.16.0
