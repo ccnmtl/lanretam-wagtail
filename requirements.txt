@@ -132,4 +132,4 @@ wagtailfontawesome==1.2.1
 l18n==2020.6.1
 
 tablib==3.0.0
-anyascii==0.1.7
+anyascii==0.2.0
