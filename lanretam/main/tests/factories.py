@@ -1,32 +1,33 @@
 from django.contrib.auth.models import User, Group
-import factory
+from factory.django import DjangoModelFactory
+from factory import Sequence, PostGenerationMethodCall, LazyAttribute
 from lanretam.main.models import ContentPage, HomePage
 
 
-class UserFactory(factory.DjangoModelFactory):
+class UserFactory(DjangoModelFactory):
     class Meta:
         model = User
-    username = factory.Sequence(lambda n: 'user%d' % n)
-    password = factory.PostGenerationMethodCall('set_password', 'test')
-    email = factory.LazyAttribute(lambda u: '%s@example.com' % u.username)
+    username = Sequence(lambda n: 'user%d' % n)
+    password = PostGenerationMethodCall('set_password', 'test')
+    email = LazyAttribute(lambda u: '%s@example.com' % u.username)
 
 
-class GroupFactory(factory.DjangoModelFactory):
+class GroupFactory(DjangoModelFactory):
     class Meta:
         model = Group
 
 
-class ContentPageFactory(factory.DjangoModelFactory):
+class ContentPageFactory(DjangoModelFactory):
     class Meta:
         model = ContentPage
-    title = factory.Sequence(lambda n: 'page {}'.format(n))
+    title = Sequence(lambda n: 'page {}'.format(n))
     depth = 1
-    path = factory.Sequence(lambda n: 'path{}'.format(n))
+    path = Sequence(lambda n: 'path{}'.format(n))
 
 
-class HomePageFactory(factory.DjangoModelFactory):
+class HomePageFactory(DjangoModelFactory):
     class Meta:
         model = HomePage
-    title = factory.Sequence(lambda n: 'page {}'.format(n))
+    title = Sequence(lambda n: 'page {}'.format(n))
     depth = 3
-    path = factory.Sequence(lambda n: 'path{}'.format(n))
+    path = Sequence(lambda n: 'path{}'.format(n))
