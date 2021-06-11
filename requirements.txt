@@ -18,10 +18,10 @@ importlib-metadata==2.1.1  # for flake8
 typing_extensions==3.10.0.0
 zipp==3.1.0  # for flake8
 flake8==3.9.2
-tornado==6.0.4
+tornado==6.1
 # wagtail spec
 beautifulsoup4==4.9.3
-soupsieve==2.0.1
+soupsieve==2.2.1
 cssselect==1.1.0
 lxml==4.6.3
 fuzzywuzzy==0.18.0
@@ -131,5 +131,5 @@ xlsxwriter>=1.2.8,<2.0
 wagtailfontawesome==1.2.1
 l18n==2020.6.1
 
-tablib==2.0.0
+tablib==3.0.0
 anyascii==0.1.7
