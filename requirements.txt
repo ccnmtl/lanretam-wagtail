@@ -35,7 +35,7 @@ ndg-httpsclient==0.5.1
 # requests
 urllib3==1.26.5  # sentry-sdk
 chardet==4.0.0  # requests
-idna==2.10  # requests
+idna==3.2  # requests
 certifi==2021.5.30  # requests, sentry-sdk
 # wagtail recs
 requests>=2.23.0,<3.0
@@ -44,7 +44,7 @@ astroid==2.5.8
 pylint==2.5.2
 six==1.16.0
 ipaddress==1.0.23  # faker
-faker==4.1.0  # factory_boy
+faker==8.6.0  # factory_boy
 factory_boy==3.2.0
 
 ldap3==2.9
@@ -102,7 +102,7 @@ django-cacheds3storage==0.2.2
 
 nameparser==1.0.6
 oauth2==1.9.0.post1
-oauthlib==3.1.0
+oauthlib==3.1.1
 pylti==0.7.0
 django-lti-provider==0.4.0
 
@@ -132,4 +132,4 @@ wagtailfontawesome==1.2.1
 l18n==2020.6.1
 
 tablib==3.0.0
-anyascii==0.1.7
+anyascii==0.2.0
