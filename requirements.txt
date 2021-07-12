@@ -46,6 +46,7 @@ six==1.16.0
 ipaddress==1.0.23  # faker
 faker==8.10.0  # factory_boy
 factory_boy==3.2.0
+telepath==0.2
 
 ldap3==2.9
 sqlparse==0.4.1
@@ -117,7 +118,7 @@ django-contact-us==0.4.4
 entrypoints==0.3
 
 # wagtail requirements
-wagtail==2.12.5
+wagtail==2.13.3
 django-modelcluster>=5.0.1,<6.0 
 django-treebeard>=4.3.1,<5.0
 django-filter>=2.2,<3.0
