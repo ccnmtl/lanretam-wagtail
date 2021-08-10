@@ -126,7 +126,7 @@ draftjs_exporter>=3.0.0,<4.1.3
 html5lib>=1.0.1,<2
 Unidecode>=1.1.1,<2.0
 Willow>=1.3,<1.5
-xlsxwriter>=1.2.8,<2.0
+xlsxwriter>=1.2.8,<3.0
 
 # wagtail additions
 wagtailfontawesome==1.2.1
