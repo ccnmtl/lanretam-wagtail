@@ -21,7 +21,7 @@ flake8==4.0.1
 tornado==6.1
 # wagtail spec
 beautifulsoup4==4.10.0
-soupsieve==2.2.1
+soupsieve==2.3
 cssselect==1.1.0
 lxml==4.6.4
 fuzzywuzzy==0.18.0
