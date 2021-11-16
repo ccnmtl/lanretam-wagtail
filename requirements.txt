@@ -130,7 +130,7 @@ xlsxwriter>=1.2.8,<4.0
 
 # wagtail additions
 wagtailfontawesome==1.2.1
-l18n==2020.6.1
+l18n==2021.3
 
 tablib==3.1.0
 anyascii==0.3.0
