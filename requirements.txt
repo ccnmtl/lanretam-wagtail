@@ -3,7 +3,7 @@ Django>=2.2.12,<3
 pytz==2021.3
 httplib2==0.20.2
 feedparser==6.0.8
-Markdown==3.3.4
+Markdown==3.3.5
 psycopg2==2.8.6
 # Pillow specific for wagtail
 Pillow>=8.1.1,<9.0.0
@@ -44,7 +44,7 @@ astroid==2.8.4
 pylint==2.11.1
 six==1.16.0
 ipaddress==1.0.23  # faker
-faker==9.8.0  # factory_boy
+faker==9.8.2  # factory_boy
 factory_boy==3.2.1
 telepath==0.2
 
