@@ -26,7 +26,6 @@ AUTHENTICATION_BACKENDS = [
 
 INSTALLED_APPS += [  # noqa
     'bootstrap4',
-    'infranil',
     'django_extensions',
     'django_cas_ng',
 
@@ -94,3 +93,5 @@ TEMPLATES = [
         },
     },
 ]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
