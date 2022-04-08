@@ -1,4 +1,4 @@
-Django>=2.2.12,<3
+Django==3.2.12
 
 pytz==2022.1
 httplib2==0.20.2
@@ -85,8 +85,6 @@ django-ga-context==0.1.0
 django-impersonate==1.8.1
 django-markwhat==1.6.2
 gunicorn==20.1.0
-django-infranil==1.1.0
-django-flatblocks==1.0.0
 django-storages==1.12.3
 
 djangorestframework>=3.11.0,<4.0
@@ -134,3 +132,4 @@ l18n==2021.3
 
 tablib==3.1.0
 anyascii==0.3.0
+asgiref==3.4.1
