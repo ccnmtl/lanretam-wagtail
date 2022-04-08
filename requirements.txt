@@ -103,7 +103,7 @@ nameparser==1.1.0
 oauth2==1.9.0.post1
 oauthlib==3.2.0
 pylti==0.7.0
-django-lti-provider==0.4.7
+django-lti-provider==1.0.0
 
 pbr==5.8.0 # bandit
 pyyaml==6.0 # bandit
@@ -111,7 +111,7 @@ stevedore==3.5.0  # bandit
 bandit==1.7.0
 
 django-smtp-ssl==1.0
-django-contact-us==0.4.4
+django-contact-us==1.0.0
 
 entrypoints==0.4
 
