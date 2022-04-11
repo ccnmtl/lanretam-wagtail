@@ -130,6 +130,6 @@ xlsxwriter>=1.2.8,<4.0
 wagtailfontawesome==1.2.1
 l18n==2021.3
 
-tablib==3.1.0
+tablib==3.2.1
 anyascii==0.3.0
 asgiref==3.5.0
