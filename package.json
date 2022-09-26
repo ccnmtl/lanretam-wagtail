@@ -19,7 +19,7 @@
     "url": "https://github.com/ccnmtl/lanretam-wagtail/issues"
   },
   "devDependencies": {
-    "eslint": "~8.23.0",
+    "eslint": "~8.24.0",
     "eslint-plugin-security": "~1.5.0",
     "mocha": "~10.0.0",
     "requirejs": "~2.3.2",
