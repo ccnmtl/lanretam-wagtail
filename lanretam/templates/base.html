@@ -48,18 +48,6 @@
 
   </head>
   
-{% if GA_CODE %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_CODE}}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', '{{GA_CODE}}', { 'anonymize_ip': true });
-    </script>
-{% endif %}
-
 <body>
     <script src="https://search.sites.columbia.edu/cu-privacy-notice/cu-privacy-notice.js"></script>    
     <header class="lmh-header container">
@@ -133,6 +121,17 @@
             This site was last updated on: <b>{{STAGING_DEPLOY_TIME}}</b>
         </p>
     </div>
+    {% endif %}
+    {% if not debug and GA_CODE %}
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{GA_CODE}}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '{{GA_CODE}}', { 'anonymize_ip': true });
+        </script>
     {% endif %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
