@@ -138,6 +138,6 @@ wagtailfontawesome==1.2.1
 wagtailmenus==3.1.2
 django-cogwheels==0.3
 
-tablib==3.3.0
+tablib==3.4.0
 anyascii==0.3.0
 asgiref==3.6.0
