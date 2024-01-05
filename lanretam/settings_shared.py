@@ -1,6 +1,6 @@
 # Django settings for lanretam project.
 import os.path
-from ccnmtlsettings.shared import common
+from ctlsettings.shared import common
 
 project = 'lanretam'
 base = os.path.dirname(__file__)
@@ -16,18 +16,12 @@ USE_TZ = True
 MIDDLEWARE += [  # noqa
     'wagtail.contrib.legacy.sitemiddleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
-    'django_cas_ng.middleware.CASMiddleware',
-]
-
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'django_cas_ng.backends.CASBackend'
 ]
 
 INSTALLED_APPS += [  # noqa
     'bootstrap4',
     'django_extensions',
-    'django_cas_ng',
+    'django_markwhat',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -49,8 +43,6 @@ INSTALLED_APPS += [  # noqa
     'lanretam.main',
 ]
 
-INSTALLED_APPS.remove('djangowind')  # noqa
-
 THUMBNAIL_SUBDIR = "thumbs"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/cms/"
@@ -64,19 +56,6 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 WIND_AFFIL_HANDLERS = ['lanretam.main.auth.WagtailEditorMapper']
 
 WAGTAILADMIN_STATIC_FILE_VERSION_STRINGS = True
-
-CAS_SERVER_URL = 'https://cas.columbia.edu/cas/'
-CAS_VERSION = '3'
-CAS_ADMIN_REDIRECT = False
-
-# Translate CUIT's CAS user attributes to the Django user model.
-# https://cuit.columbia.edu/content/cas-3-ticket-validation-response
-CAS_APPLY_ATTRIBUTES_TO_USER = True
-CAS_RENAME_ATTRIBUTES = {
-    'givenName': 'first_name',
-    'lastName': 'last_name',
-    'mail': 'email',
-}
 
 TEMPLATES = [
     {

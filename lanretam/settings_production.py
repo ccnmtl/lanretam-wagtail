@@ -1,6 +1,6 @@
 import sys
 from lanretam.settings_shared import *  # noqa f403
-from ccnmtlsettings.production import common
+from ctlsettings.production import common
 from django.conf import settings
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
@@ -11,6 +11,7 @@ locals().update(
         base=base,  # noqa f405
         STATIC_ROOT=STATIC_ROOT,  # noqa f405
         INSTALLED_APPS=INSTALLED_APPS,  # noqa f405
+        s3prefix="ccnmtl",
     ))
 
 try:
