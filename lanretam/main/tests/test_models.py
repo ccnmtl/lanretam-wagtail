@@ -29,23 +29,23 @@ class ContentPageTest(WagtailPageTests):
 
     def test_sidemenu_module(self):
         sidemenu = self.module.sidemenu()
-        self.assertEquals(sidemenu.count(), 2)
-        self.assertEquals(sidemenu[0].id, self.child.id)
-        self.assertEquals(sidemenu[1].id, self.grandchild.id)
+        self.assertEqual(sidemenu.count(), 2)
+        self.assertEqual(sidemenu[0].id, self.child.id)
+        self.assertEqual(sidemenu[1].id, self.grandchild.id)
 
     def test_sidemenu_child(self):
         sidemenu = self.child.sidemenu()
-        self.assertEquals(sidemenu.count(), 2)
-        self.assertEquals(sidemenu[0].id, self.child.id)
-        self.assertEquals(sidemenu[1].id, self.grandchild.id)
+        self.assertEqual(sidemenu.count(), 2)
+        self.assertEqual(sidemenu[0].id, self.child.id)
+        self.assertEqual(sidemenu[1].id, self.grandchild.id)
 
     def test_sidemenu_grandchild(self):
         sidemenu = self.grandchild.sidemenu()
-        self.assertEquals(sidemenu.count(), 2)
-        self.assertEquals(sidemenu[0].id, self.child.id)
-        self.assertEquals(sidemenu[1].id, self.grandchild.id)
+        self.assertEqual(sidemenu.count(), 2)
+        self.assertEqual(sidemenu[0].id, self.child.id)
+        self.assertEqual(sidemenu[1].id, self.grandchild.id)
 
     def test_module(self):
-        self.assertEquals(self.module.module().id, self.module.id)
-        self.assertEquals(self.child.module().id, self.module.id)
-        self.assertEquals(self.grandchild.module().id, self.module.id)
+        self.assertEqual(self.module.module().id, self.module.id)
+        self.assertEqual(self.child.module().id, self.module.id)
+        self.assertEqual(self.grandchild.module().id, self.module.id)
