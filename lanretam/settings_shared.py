@@ -21,7 +21,6 @@ MIDDLEWARE += [  # noqa
 INSTALLED_APPS += [  # noqa
     'bootstrap4',
     'django_extensions',
-    'django_markwhat',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
