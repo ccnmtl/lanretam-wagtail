@@ -1,9 +1,6 @@
-import sys
 from lanretam.settings_shared import *  # noqa f403
 from ctlsettings.production import common
-from django.conf import settings
-import sentry_sdk
-from sentry_sdk.integrations.django import DjangoIntegration
+from django.conf import settings, init_sentry
 
 locals().update(
     common(
@@ -19,8 +16,5 @@ try:
 except ImportError:
     pass
 
-if ('collectstatic' not in sys.argv) and hasattr(settings, 'SENTRY_DSN'):
-    sentry_sdk.init(
-        dsn=SENTRY_DSN,  # noqa: F405
-        integrations=[DjangoIntegration()],
-    )
+if hasattr(settings, 'SENTRY_DSN'):
+    init_sentry(SENTRY_DSN)  # noqa F405
