@@ -46,7 +46,7 @@ idna==3.10  # requests
 certifi==2025.1.31  # requests, sentry-sdk
 # wagtail recs
 requests>=2.23.0,<3.0
-logilab-common==2.0.0
+logilab-common==2.1.0
 astroid==3.3.5
 pylint==3.3.1
 six==1.17.0
