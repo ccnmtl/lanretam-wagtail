@@ -141,4 +141,4 @@ wagtailmenus==4.0
 django-cogwheels==0.3
 
 anyascii==0.3.0
-asgiref==3.8.1
+asgiref==3.9.0
