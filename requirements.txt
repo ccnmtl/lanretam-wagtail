@@ -11,7 +11,7 @@ tinycss2==1.5.0 # django-markdownify
 bleach==6.3.0 # django-markdownify
 django-markdownify==0.9.5
 
-psycopg[binary]==3.2.1
+psycopg[binary]==3.3.0
 
 versiontools==1.9.1
 statsd==4.0.1
