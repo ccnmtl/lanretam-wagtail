@@ -1,5 +1,4 @@
 Django>=4.2.14,<5
-backports.zoneinfo;python_version<"3.9"
 
 pytz==2025.2
 httplib2==0.31.0
@@ -78,8 +77,6 @@ django-bootstrap4==25.3
 django-debug-toolbar==6.1.0
 
 django-smoketest==1.2.1
-# For django-extensions
-typing==3.7.4.1; python_version < '3.5'
 django-extensions==4.1
 django-stagingcontext==0.1.0
 django-ga-context==0.1.0
