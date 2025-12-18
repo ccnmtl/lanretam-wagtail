@@ -126,7 +126,7 @@ telepath>=0.1.1,<1
 
 # wagtail additions
 wagtailfontawesome==1.2.1
-wagtailmenus==4.0
+wagtailmenus==4.0.5
 django-cogwheels==0.3
 
 anyascii==0.3.0
