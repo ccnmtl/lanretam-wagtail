@@ -47,7 +47,7 @@ logilab-common==2.1.0
 astroid==4.0.0
 pylint==4.0.0
 six==1.17.0
-faker==39.0.0  # factory_boy
+faker==40.1.0  # factory_boy
 factory_boy==3.3.0
 telepath==0.3
 
