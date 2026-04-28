@@ -14,7 +14,6 @@ PROJECT_APPS = [
 USE_TZ = True
 
 MIDDLEWARE += [  # noqa
-    'wagtail.contrib.legacy.sitemiddleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
@@ -36,10 +35,9 @@ INSTALLED_APPS += [  # noqa
     'wagtail.images',
     'wagtail.search',
     'wagtail.admin',
-    'wagtail.core',
+    'wagtail',
     'modelcluster',
     'taggit',
-    'wagtailfontawesome',
 
     'lanretam.main',
 ]

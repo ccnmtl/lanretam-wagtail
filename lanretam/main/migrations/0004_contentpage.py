@@ -3,8 +3,8 @@
 from django.db import migrations, models
 import django.db.models.deletion
 import wagtail.contrib.table_block.blocks
-import wagtail.core.blocks
-import wagtail.core.fields
+import wagtail.blocks
+import wagtail.fields
 import wagtail.images.blocks
 
 
@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
             name='ContentPage',
             fields=[
                 ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('body', wagtail.core.fields.StreamField([('text', wagtail.core.blocks.RichTextBlock(icon='pilcrow')), ('image', wagtail.core.blocks.StructBlock([('image_file', wagtail.images.blocks.ImageChooserBlock(required=True)), ('caption', wagtail.core.blocks.CharBlock(help_text='Caption for the image', required=False)), ('attribution', wagtail.core.blocks.CharBlock(required=False))])), ('table_caption', wagtail.core.blocks.CharBlock(help_text='Table caption', icon='fa-thumb-tack', required=False)), ('table', wagtail.contrib.table_block.blocks.TableBlock(template='main/blocks/table_block.html')), ('sr_text', wagtail.core.blocks.TextBlock(icon='fa-universal-access', label='SR text', required=False)), ('map_block', wagtail.core.blocks.StructBlock([('map_title', wagtail.core.blocks.CharBlock(required=False))]))], blank=True, verbose_name='Page content')),
+                ('body', wagtail.fields.StreamField([('text', wagtail.blocks.RichTextBlock(icon='pilcrow')), ('image', wagtail.blocks.StructBlock([('image_file', wagtail.images.blocks.ImageChooserBlock(required=True)), ('caption', wagtail.blocks.CharBlock(help_text='Caption for the image', required=False)), ('attribution', wagtail.blocks.CharBlock(required=False))])), ('table_caption', wagtail.blocks.CharBlock(help_text='Table caption', icon='fa-thumb-tack', required=False)), ('table', wagtail.contrib.table_block.blocks.TableBlock(template='main/blocks/table_block.html')), ('sr_text', wagtail.blocks.TextBlock(icon='fa-universal-access', label='SR text', required=False)), ('map_block', wagtail.blocks.StructBlock([('map_title', wagtail.blocks.CharBlock(required=False))]))], blank=True, verbose_name='Page content')),
             ],
             options={
                 'abstract': False,
