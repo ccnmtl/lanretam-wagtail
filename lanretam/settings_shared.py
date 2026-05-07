@@ -39,8 +39,6 @@ INSTALLED_APPS += [  # noqa
     'wagtail',
     'modelcluster',
     'taggit',
-    'wagtailfontawesome',
-
     'lanretam.main',
 ]
 
