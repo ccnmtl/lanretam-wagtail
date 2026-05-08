@@ -1,6 +1,8 @@
 from wagtail.images.blocks import ImageChooserBlock
-from wagtail.core.blocks import (CharBlock, TextBlock, RichTextBlock,
-                                 StructBlock, StreamBlock)
+from wagtail.blocks import (
+    CharBlock, TextBlock, RichTextBlock,
+    StructBlock, StreamBlock
+)
 from wagtail.contrib.table_block.blocks import TableBlock
 
 

@@ -1,9 +1,9 @@
 # from django.db import models
-from wagtail.core.models import Page
-from wagtail.core.fields import StreamField
-# from wagtail.core import blocks
+from wagtail.models import Page
+from wagtail.fields import StreamField
+# from wagtail import blocks
 # from wagtail.contrib.table_block.blocks import TableBlock
-from wagtail.admin.edit_handlers import StreamFieldPanel
+from wagtail.admin.panels import FieldPanel
 from lanretam.main.blocks import BaseStreamBlock
 
 
@@ -11,11 +11,12 @@ class HomePage(Page):
     body = StreamField(
         BaseStreamBlock(),
         verbose_name="Page content",
-        blank=True
+        blank=True,
+        use_json_field=True
         )
 
     content_panels = Page.content_panels + [
-        StreamFieldPanel('body'),
+        FieldPanel('body'),
     ]
     # Limits this page type to only HomePage
     # parent_page_types = []
@@ -25,7 +26,8 @@ class ContentPage(Page):
     body = StreamField(
         BaseStreamBlock(),
         verbose_name="Page content",
-        blank=True
+        blank=True,
+        use_json_field=True
         )
 
     def sidemenu(self):
@@ -39,5 +41,5 @@ class ContentPage(Page):
                 return page
 
     content_panels = Page.content_panels + [
-        StreamFieldPanel('body'),
+        FieldPanel('body'),
     ]
