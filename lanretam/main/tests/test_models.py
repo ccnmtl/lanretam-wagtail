@@ -1,6 +1,6 @@
 from lanretam.main.models import HomePage, ContentPage
 from lanretam.main.tests.factories import ContentPageFactory, HomePageFactory
-from wagtail.tests.utils import WagtailPageTests
+from wagtail.test.utils import WagtailPageTests
 
 
 class ContentPageTest(WagtailPageTests):
