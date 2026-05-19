@@ -108,7 +108,7 @@ entrypoints==0.4
 standard-imghdr
 django-modelcluster>=6.5,<7.0
 laces==0.1.2
-wagtail==6.3
+wagtail==7.4.1
 django-permissionedforms>=0.1,<1.0
 django-taggit>=2.0,<7.0
 django-treebeard>=5.1.0,<6.0
