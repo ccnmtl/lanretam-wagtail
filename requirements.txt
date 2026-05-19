@@ -1,4 +1,4 @@
-Django>=4.2.14,<5
+Django>=5.2,<6
 
 pytz==2026.2
 httplib2==0.31.0
@@ -107,8 +107,10 @@ entrypoints==0.4
 # wagtail requirements
 standard-imghdr
 django-modelcluster>=6.5,<7.0
-laces==0.1.2
-wagtail==6.3
+laces>=0.1,<1.0
+wagtail==6.4.2
+django-tasks==0.12.0
+django-stubs-ext==6.0.4
 django-permissionedforms>=0.1,<1.0
 django-taggit>=2.0,<7.0
 django-treebeard>=5.1.0,<6.0
