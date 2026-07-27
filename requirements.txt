@@ -27,7 +27,7 @@ tornado==6.5.7
 # wagtail spec
 beautifulsoup4==4.15.0
 soupsieve==2.9
-cssselect==1.4.0
+cssselect==1.5.0
 lxml==6.1.0
 fuzzywuzzy==0.18.0
 traitlets<6.0.0  # ipython
