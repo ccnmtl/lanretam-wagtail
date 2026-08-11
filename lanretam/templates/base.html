@@ -44,7 +44,7 @@
     {% include "ctlsettings/sentry_js.html" %}
 
     <script src="{{STATIC_URL}}js/lib/jquery-3.2.1.min.js"></script>
-
+    {% block extrahead %}{% endblock %}
   </head>
   
 <body>
