@@ -5,6 +5,17 @@
 
 {% block usernav %}{% endblock %}
 
+{% block extrahead %}
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async
+        defer></script>
+{% endblock %}
+
+<script>
+    function enableSubmit() {
+        document.getElementById("login").disabled = false;
+    }
+</script>
+
 {% block content %}
 
 <div class="loginbox-container columbia">
@@ -48,8 +59,9 @@
                 </div>
                 <input class="regbutton" type="button" value="Guest Log In" {% if form.errors %}style="display: none"{% endif %}
                     onclick="jQuery('.login-local-form').show(); jQuery(this).hide(); return false;"/>
-                <input class="regbutton login-local-form" type="submit" value="Log In" {% if not form.errors %}style="display: none;"{% endif %} />                        
+                <input id="login" class="regbutton login-local-form" type="submit" value="Log In" {% if not form.errors %}style="display: none;"{% endif %} disabled />                        
                 <input type="hidden" name="next" value="{{ next|urlencode }}" />
+                <div class="cf-turnstile" data-sitekey="{{ TURNSTILE_SITE_KEY }}" data-callback="enableSubmit" ></div>
             </form>
             <p class="smalltxt"><a href="/registration/register/" title="Create your new project account">Need a new account?</a></p>
         </div>

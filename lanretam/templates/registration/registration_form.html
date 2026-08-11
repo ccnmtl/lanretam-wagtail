@@ -1,6 +1,16 @@
 {% extends "registration/base_registration.html" %}
 {% load i18n bootstrap4 %}
 {% block title %}Sign up for an account{% endblock %}
+{% block extrahead %}
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async
+        defer></script>
+{% endblock %}
+
+<script>
+    function enableSubmit() {
+        document.getElementById("reg-login").disabled = false;
+    }
+</script>
 
 {% block registration_content %}
     <h2 class="pagetitle signuptitle">Sign up for an account</h2>
@@ -15,7 +25,8 @@
     
     <form method="post" action="." class="register form">
       {% bootstrap_form form %}
-      <input class="btn btn-primary" type="submit" value="{% trans 'Sign up!' %}" />
+      <input id="reg-login" class="btn btn-primary" type="submit" value="{% trans 'Sign up!' %}" disabled />
+      <div class="cf-turnstile" data-sitekey="{{ TURNSTILE_SITE_KEY }}" data-callback="enableSubmit" ></div>
     </form>
 
 {% endblock %}
