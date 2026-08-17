@@ -111,7 +111,7 @@ django-modelcluster>=6.5,<7.0
 laces>=0.1.2,<1.0
 wagtail==6.4.2
 django-tasks==0.12.0
-django-stubs-ext==6.0.4
+django-stubs-ext==6.1.0
 django-permissionedforms>=0.1,<1.0
 django-taggit>=2.0,<7.0
 django-treebeard>=5.3.0,<6.0
