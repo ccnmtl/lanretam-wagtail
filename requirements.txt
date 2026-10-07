@@ -1,6 +1,6 @@
 Django>=5.2,<6
 
-pytz==2026.4
+pytz==2026.5
 httplib2==0.32.0
 feedparser==6.0.11
 Markdown==3.11
