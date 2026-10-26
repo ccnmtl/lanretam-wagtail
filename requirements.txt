@@ -83,9 +83,9 @@ django-impersonate==1.9.1
 gunicorn==26.2.0
 django-storages==1.14.6
 
-djangorestframework>=3.18.0,<4.0
+djangorestframework>=3.18.2,<4.0
 
-djangorestframework==3.18.0
+djangorestframework==3.18.2
 ctlsettings==0.4.9
 
 django-reversion==6.4.0
@@ -115,7 +115,7 @@ django-stubs-ext==6.1.0
 django-permissionedforms>=0.1,<1.0
 django-taggit>=2.0,<7.0
 django-treebeard>=5.3.0,<6.0
-djangorestframework>=3.11.1,<4.0
+djangorestframework>=3.18.2,<4.0
 django-filter>=26.2,<27
 draftjs_exporter>=7.2.0,<8.0
 Pillow>=13.0.0,<14.0.0
